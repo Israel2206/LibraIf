@@ -11,6 +11,8 @@ public class Livro {
     private int anoPublicacao;
     private boolean disponivel;
 
+    /* Getter e Setters */
+
     public String getTitulo() {
         return titulo;
     }
@@ -50,4 +52,18 @@ public class Livro {
     public void setDisponivel(boolean disponivel) {
         this.disponivel = disponivel;
     }
+
+
+    /* Construtor */
+
+    public Livro(String titulo, String autor, String isbn, int anoPublicacao, boolean disponivel) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.isbn = isbn;
+        this.anoPublicacao = anoPublicacao;
+        this.disponivel = disponivel;
+    }
+
+    /* Métodos */
+
 }
