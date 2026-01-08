@@ -12,9 +12,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (true){
-
+            System.out.println("===SELECIONE===");
+            System.out.println("1 - Cadastrar Usuario");
+            System.out.println("2 - Entrar na conta do usuario");
+            System.out.println("3 - Sair");
+            System.out.print("Digite: ");
+            byte opcao = scanner.nextByte();
 
         }
-
     }
 }

@@ -6,11 +6,20 @@ package model;
 
 public class Usuario {
     private String nome;
+    private String senha;
     private int matricula;
     private boolean atrasado;
 
-
     /* Definindo os Getters */
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
     public String getNome() {
         return nome;
     }
@@ -38,10 +47,10 @@ public class Usuario {
 
     /* Construtor */
 
-    public Usuario(String nome, int matricula, boolean atrasado) {
+    public Usuario(String nome, String senha, int matricula, boolean atrasado) {
         this.nome = nome;
+        this.senha = senha;
         this.matricula = matricula;
         this.atrasado = atrasado;
     }
-
 }
