@@ -17,16 +17,8 @@ public class Biblioteca {
         return livros;
     }
 
-    public void setLivros(List<Livro> livros) {
-        this.livros = livros;
-    }
-
     public List<Usuario> getUsuarios() {
         return usuarios;
-    }
-
-    public void setUsuarios(List<Usuario> usuarios) {
-        this.usuarios = usuarios;
     }
 
     /* Construtor */

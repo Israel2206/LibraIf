@@ -5,11 +5,16 @@
 
 package app;
 
+import model.Biblioteca;
+import model.Usuario;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Biblioteca biblioteca = new Biblioteca();
+
 
         while (true){
             System.out.println("===SELECIONE===");
@@ -20,7 +25,19 @@ public class Main {
             byte opcao = scanner.nextByte();
 
             if (opcao == 1){
+                System.out.print("Nome: ");
+                String nome = scanner.next();
 
+                System.out.print("Senha: ");
+                String senha = scanner.next();
+
+                System.out.print("Matrícula: ");
+                int matricula = scanner.nextInt();
+
+                System.out.print("Tipo de usuário(comum/bibliotecario(a): ");
+                String tipoDeUsuario = scanner.next();
+
+                Usuario usuario = new Usuario(nome, senha, matricula, tipoDeUsuario);
             }
 
         }

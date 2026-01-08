@@ -9,8 +9,17 @@ public class Usuario {
     private String senha;
     private int matricula;
     private boolean atrasado;
+    private String tipoDeUsuario;
 
     /* Definindo os Getters */
+
+    public String getTipoDeUsuario() {
+        return tipoDeUsuario;
+    }
+
+    public void setTipoDeUsuario(String tipoDeUsuario) {
+        this.tipoDeUsuario = tipoDeUsuario;
+    }
 
     public String getSenha() {
         return senha;
@@ -47,10 +56,10 @@ public class Usuario {
 
     /* Construtor */
 
-    public Usuario(String nome, String senha, int matricula, boolean atrasado) {
+    public Usuario(String nome, String senha, int matricula, String tipoDeUsuario) {
         this.nome = nome;
         this.senha = senha;
         this.matricula = matricula;
-        this.atrasado = atrasado;
+        this.tipoDeUsuario = tipoDeUsuario;
     }
 }
