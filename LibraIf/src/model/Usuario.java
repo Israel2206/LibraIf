@@ -36,8 +36,12 @@ public class Usuario {
         this.atrasado = atrasado;
     }
 
-    /* Iniciando os métodos da classe usuario*/
+    /* Construtor */
 
-
+    public Usuario(String nome, int matricula, boolean atrasado) {
+        this.nome = nome;
+        this.matricula = matricula;
+        this.atrasado = atrasado;
+    }
 
 }
