@@ -1,5 +1,9 @@
 package model;
 
+/**
+ * O gerenciamento dos livros serão realizados aqui
+ */
+
 public class Livro {
     private String titulo;
     private String ISBN;
