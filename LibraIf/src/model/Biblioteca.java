@@ -37,7 +37,7 @@ public class Biblioteca {
 
     /* Métodos de Livro */
 
-    public void adicionarLivro(Livro livro){
+    public void cadastrarLivro(Livro livro){
         livros.add(livro);
     }
 
@@ -51,7 +51,7 @@ public class Biblioteca {
 
     /* Métodos do Usuario */
 
-    public void adicionarUsuario(Usuario usuario){
+    public void cadastrarUsuario(Usuario usuario){
         usuarios.add(usuario);
     }
 
