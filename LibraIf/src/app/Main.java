@@ -23,23 +23,30 @@ public class Main {
             System.out.println("3 - Sair");
             System.out.print("Digite: ");
             byte opcao = scanner.nextByte();
+            scanner.next();
 
             if (opcao == 1) {
                 System.out.print("Nome: ");
-                String nome = scanner.next();
+                String nome = scanner.nextLine();
 
                 System.out.print("Senha: ");
-                String senha = scanner.next();
+                String senha = scanner.nextLine();
 
                 System.out.print("Matrícula: ");
-                int matricula = scanner.nextInt();
+                String matricula = scanner.nextLine();
 
-                System.out.print("Tipo de usuário(comum/bibliotecario(a): ");
-                String tipoDeUsuario = scanner.next();
+                System.out.print("Tipo de usuário (comum/bibliotecario): ");
+                String tipoDeUsuario = scanner.nextLine();
 
-                Usuario usuario = new Usuario(nome, senha, matricula, tipoDeUsuario);
 
-                biblioteca.cadastrarUsuario(usuario);
+                if (biblioteca.verificarMatricula(matricula)){
+                    System.out.println("Está matrícula já está sendo usada!");
+                } else{
+                    Usuario usuario = new Usuario(nome, senha, matricula, tipoDeUsuario);
+                    biblioteca.cadastrarUsuario(usuario);
+                    System.out.println("Usuário cadastrado com sucesso!");
+                }
+
             } else if(opcao == 2){
                 biblioteca.mostrar();
             }else if (opcao == 3){

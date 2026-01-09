@@ -7,7 +7,7 @@ package model;
 public class Usuario {
     private String nome;
     private String senha;
-    private int matricula;
+    private String matricula;
     private boolean atrasado;
     private String tipoDeUsuario;
 
@@ -33,7 +33,7 @@ public class Usuario {
         return nome;
     }
 
-    public int getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
@@ -46,7 +46,7 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
@@ -56,7 +56,7 @@ public class Usuario {
 
     /* Construtor */
 
-    public Usuario(String nome, String senha, int matricula, String tipoDeUsuario) {
+    public Usuario(String nome, String senha, String matricula, String tipoDeUsuario) {
         this.nome = nome;
         this.senha = senha;
         this.matricula = matricula;

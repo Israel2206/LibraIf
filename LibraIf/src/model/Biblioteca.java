@@ -47,6 +47,15 @@ public class Biblioteca {
         usuarios.add(usuario);
     }
 
+    public boolean verificarMatricula(String matricula){
+        for (Usuario usuario : usuarios){
+            if (usuario.getMatricula().equals(matricula)){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public void mostrar(){
         for (Usuario usuario : usuarios) {
             System.out.println(usuario);
