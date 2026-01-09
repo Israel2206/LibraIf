@@ -62,4 +62,16 @@ public class Usuario {
         this.matricula = matricula;
         this.tipoDeUsuario = tipoDeUsuario;
     }
+
+    /* toString */
+
+    @Override
+    public String toString() {
+        return "Usuario {" +
+                "nome = '" + nome + '\'' +
+                ", matricula = " + matricula +
+                ", atrasado = " + atrasado +
+                ", tipoDeUsuario = '" + tipoDeUsuario + '\'' +
+                '}';
+    }
 }

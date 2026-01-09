@@ -24,7 +24,7 @@ public class Main {
             System.out.print("Digite: ");
             byte opcao = scanner.nextByte();
 
-            if (opcao == 1){
+            if (opcao == 1) {
                 System.out.print("Nome: ");
                 String nome = scanner.next();
 
@@ -38,6 +38,13 @@ public class Main {
                 String tipoDeUsuario = scanner.next();
 
                 Usuario usuario = new Usuario(nome, senha, matricula, tipoDeUsuario);
+
+                biblioteca.cadastrarUsuario(usuario);
+            } else if(opcao == 2){
+                biblioteca.mostrar();
+            }else if (opcao == 3){
+                System.out.println("Saindo...");
+                break;
             }
 
         }

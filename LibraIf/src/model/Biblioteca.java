@@ -47,6 +47,12 @@ public class Biblioteca {
         usuarios.add(usuario);
     }
 
+    public void mostrar(){
+        for (Usuario usuario : usuarios) {
+            System.out.println(usuario);
+        }
+    }
+
     public void removerUsuario(Usuario usuario){
         if (usuarios.contains(usuario)){
             usuarios.remove(usuario);
