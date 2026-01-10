@@ -22,8 +22,8 @@ public class Main {
             System.out.println("2 - Entrar como usuario");
             System.out.println("3 - Sair");
             System.out.print("Digite: ");
-            byte opcao = scanner.nextByte();
-            scanner.next();
+            int opcao = scanner.nextInt();
+            scanner.nextLine();
 
             if (opcao == 1) {
                 System.out.print("Nome: ");
@@ -48,7 +48,22 @@ public class Main {
                 }
 
             } else if(opcao == 2){
-                biblioteca.mostrar();
+                System.out.print("Digite sua mátricula: ");
+                String matricula = scanner.next();
+
+                if (biblioteca.verificarMatricula(matricula)){
+                    System.out.print("Informe a sua Senha: ");
+                    String senha = scanner.next();
+
+                    if (biblioteca.verificarSenha(senha)){
+                        System.out.println("senha certa fih, so testando até aqui!");
+                    }else {
+                        System.out.println("Senha Incorreta!");
+                    }
+                }else{
+                    System.out.println("Está mátricula não existe ou foi digitada de forma errada!");
+                }
+
             }else if (opcao == 3){
                 System.out.println("Saindo...");
                 break;

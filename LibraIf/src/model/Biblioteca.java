@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Todo o gerenciamento da biblioteca será realizado aqui
+ * Todo o gerenciamento da biblioteca será realizado aqui.
  * Aqui também será o sistema da Biblioteca
  */
 
@@ -51,6 +51,15 @@ public class Biblioteca {
     public boolean verificarMatricula(String matricula){
         for (Usuario usuario : usuarios){
             if (usuario.getMatricula().equals(matricula)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean verificarSenha(String senha){
+        for (Usuario usuario : usuarios){
+            if (usuario.getSenha().equals(senha)){
                 return true;
             }
         }
