@@ -5,6 +5,7 @@ import java.util.List;
 
 /**
  * Todo o gerenciamento da biblioteca será realizado aqui
+ * Aqui também será o sistema da Biblioteca
  */
 
 public class Biblioteca {
