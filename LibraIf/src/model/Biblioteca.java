@@ -80,4 +80,23 @@ public class Biblioteca {
         }
     }
 
+    /**
+     * Lugar onde vai estar os dois paineis quando a pessoa entrar
+     */
+
+    public void painelUsuario(){
+        System.out.println("===ESCOLHA===");
+        System.out.println("1 - Ver livros disponíveis");
+        System.out.println("2 - Fazer empréstimo");
+        System.out.println("3 - Sair da conta");
+    }
+
+    public void painelfuncionario(){
+        System.out.println("===ESCOLHA===");
+        System.out.println("1 - Cadastrar livro");
+        System.out.println("2 - Remover livro");
+        System.out.println("3 - Gerenciar usuários");
+        System.out.println("4 - Sair da conta");
+    }
+
 }
