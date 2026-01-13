@@ -56,14 +56,24 @@ public class Livro {
 
     /* Construtor */
 
-    public Livro(String titulo, String autor, String isbn, int anoPublicacao, boolean disponivel) {
+    public Livro(String titulo, String autor, String isbn, int anoPublicacao) {
         this.titulo = titulo;
         this.autor = autor;
         this.isbn = isbn;
         this.anoPublicacao = anoPublicacao;
-        this.disponivel = disponivel;
+        this.disponivel = true;
     }
 
     /* Métodos */
 
+    @Override
+    public String toString() {
+        return "Livro{" +
+                "titulo='" + titulo + '\'' +
+                ", autor='" + autor + '\'' +
+                ", isbn='" + isbn + '\'' +
+                ", anoPublicacao=" + anoPublicacao +
+                ", disponivel=" + disponivel +
+                '}';
+    }
 }

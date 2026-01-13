@@ -28,20 +28,6 @@ public class Biblioteca {
         usuarios = new ArrayList<>();
     }
 
-    /* Métodos de Livro */
-
-    public void cadastrarLivro(Livro livro){
-        livros.add(livro);
-    }
-
-    public void removerLivro(Livro livro){
-        if (livros.contains(livro)){
-            livros.remove(livro);
-        } else{
-            System.out.println("O livro não foi localizado!");
-        }
-    }
-
     /* Métodos do Usuario */
 
     public void cadastrarUsuario(Usuario usuario){
@@ -88,6 +74,24 @@ public class Biblioteca {
         }
         return null;
     }
+
+
+    /*Métodos do Livro*/
+
+    public void cadastrarLivro(Livro livro){
+        livros.add(livro);
+        System.out.println("Livro Cadastrado com sucesso");
+    }
+
+    public boolean verificarISBN(String isbn){
+        for (Livro livro : livros){
+            if (livro.getIsbn().equals(isbn)){
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     /**
      * Painel principal

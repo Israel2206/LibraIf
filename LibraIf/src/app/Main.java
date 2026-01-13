@@ -6,6 +6,7 @@
 package app;
 
 import model.Biblioteca;
+import model.Livro;
 import model.PerfilUsuario;
 import model.Usuario;
 
@@ -21,7 +22,7 @@ public class Main {
 
 
         while (true){
-
+            biblioteca.mostarPainelPrincipal();
             System.out.print("Digite: ");
             int opcao = scanner.nextInt();
             scanner.nextLine();
@@ -65,6 +66,37 @@ public class Main {
                             biblioteca.mostrarPainelUsuario();
                         }else{
                             biblioteca.mostrarPainelFuncionario();
+                            System.out.print("Digite: ");
+                            int opcaoFuncionario = scanner.nextInt();
+
+                            if (opcaoFuncionario == 1){
+                                System.out.println("===Cadastro de Livro===");
+                                System.out.print("Digite o título do livro: ");
+                                String titulo = scanner.next();
+
+                                System.out.print("Digite o nome do autor: ");
+                                String autor = scanner.next();
+
+                                System.out.print("Digite o ISBN do livro: ");
+                                String isbn = scanner.next();
+
+
+                                System.out.print("Digite o ano de publicação do livro: ");
+                                int anoPublicacao = scanner.nextInt();
+
+                                if (biblioteca.verificarISBN(isbn)){
+                                    System.out.println("ISBN já em uso!");
+                                    return;
+                                }else {
+                                    Livro livro = new Livro(titulo,autor,isbn,anoPublicacao);
+                                    biblioteca.cadastrarLivro(livro);
+                                }
+
+
+                            } else if (opcaoFuncionario == 4) {
+                                System.out.println("Saindo da Conta!");
+                                break;
+                            }
                         }
                     }else {
                         System.out.println("Senha Incorreta!");
