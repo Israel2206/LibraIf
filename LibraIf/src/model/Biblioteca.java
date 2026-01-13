@@ -80,6 +80,16 @@ public class Biblioteca {
         }
     }
 
+    public Usuario buscarUsuarioPorMatricula(String matricula){
+        for (Usuario usuario : usuarios){
+            if (usuarios.equals(matricula)){
+                return usuario;
+            }
+        }
+        return null;
+    }
+
+
     /**
      * Lugar onde vai estar os dois paineis quando a pessoa entrar
      */

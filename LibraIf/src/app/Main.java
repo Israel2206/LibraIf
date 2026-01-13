@@ -11,6 +11,8 @@ import model.Usuario;
 
 import java.util.Scanner;
 
+import static model.PerfilUsuario.COMUM;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -53,19 +55,22 @@ public class Main {
             } else if(opcao == 2){
                 System.out.print("Digite sua mátricula: ");
                 String matricula = scanner.next();
+                Usuario usuario = biblioteca.buscarUsuarioPorMatricula(matricula);
 
-                if (biblioteca.verificarMatricula(matricula)){
+                if (usuario == null){
+                    System.out.println("matrícula inválida");
+                } else{
                     System.out.print("Informe a sua Senha: ");
                     String senha = scanner.next();
-
-                    if (biblioteca.verificarSenha(senha)){
-                        //fazer um verificador se a pessoa é comum ou bibliotecario(a)
-
+                    if (senha == usuario.getSenha()){
+                        if (usuario.getTipoDeUsuario() == COMUM){
+                            biblioteca.mostrarPainelUsuario();
+                        }else{
+                            biblioteca.mostrarPainelFuncionario();
+                        }
                     }else {
                         System.out.println("Senha Incorreta!");
                     }
-                }else{
-                    System.out.println("Está mátricula não existe ou foi digitada de forma errada!");
                 }
 
             }else if (opcao == 3){

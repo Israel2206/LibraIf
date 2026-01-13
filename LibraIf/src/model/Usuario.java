@@ -41,7 +41,6 @@ public class Usuario {
         return atrasado;
     }
 
-    /* Definindo os Setters */
     public void setNome(String nome) {
         this.nome = nome;
     }
