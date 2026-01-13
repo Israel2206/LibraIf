@@ -82,7 +82,7 @@ public class Biblioteca {
 
     public Usuario buscarUsuarioPorMatricula(String matricula){
         for (Usuario usuario : usuarios){
-            if (usuarios.equals(matricula)){
+            if (usuario.getMatricula().equals(matricula)){
                 return usuario;
             }
         }
