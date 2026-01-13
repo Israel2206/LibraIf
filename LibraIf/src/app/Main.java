@@ -21,10 +21,7 @@ public class Main {
 
 
         while (true){
-            System.out.println("===SELECIONE===");
-            System.out.println("1 - Cadastrar Usuario");
-            System.out.println("2 - Entrar como usuario");
-            System.out.println("3 - Sair");
+
             System.out.print("Digite: ");
             int opcao = scanner.nextInt();
             scanner.nextLine();

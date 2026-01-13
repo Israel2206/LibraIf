@@ -89,6 +89,17 @@ public class Biblioteca {
         return null;
     }
 
+    /**
+     * Painel principal
+     */
+
+    public void mostarPainelPrincipal(){
+        System.out.println("===SELECIONE===");
+        System.out.println("1 - Cadastrar Usuario");
+        System.out.println("2 - Entrar como usuario");
+        System.out.println("3 - Sair");
+    }
+
 
     /**
      * Lugar onde vai estar os dois paineis quando a pessoa entrar
