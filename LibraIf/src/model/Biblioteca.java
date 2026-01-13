@@ -99,4 +99,12 @@ public class Biblioteca {
         System.out.println("4 - Sair da conta");
     }
 
+    /* Onde ficará localizado o painel do tipo de usuario*/
+
+    public void mostrarTipoDeUsuario(){
+        System.out.println("Tipo de usuário: ");
+        System.out.println("Digite '1' se você for um Usuario comum");
+        System.out.println("Digite '2' se você for bibliotecario");
+    }
+
 }

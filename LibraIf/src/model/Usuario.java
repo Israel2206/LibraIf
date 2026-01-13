@@ -9,15 +9,15 @@ public class Usuario {
     private String senha;
     private String matricula;
     private boolean atrasado;
-    private String tipoDeUsuario;
+    private PerfilUsuario tipoDeUsuario;
 
     /* Definindo os Getters */
 
-    public String getTipoDeUsuario() {
+    public PerfilUsuario getTipoDeUsuario() {
         return tipoDeUsuario;
     }
 
-    public void setTipoDeUsuario(String tipoDeUsuario) {
+    public void setTipoDeUsuario(PerfilUsuario tipoDeUsuario) {
         this.tipoDeUsuario = tipoDeUsuario;
     }
 
@@ -56,7 +56,7 @@ public class Usuario {
 
     /* Construtor */
 
-    public Usuario(String nome, String senha, String matricula, String tipoDeUsuario) {
+    public Usuario(String nome, String senha, String matricula, PerfilUsuario tipoDeUsuario) {
         this.nome = nome;
         this.senha = senha;
         this.matricula = matricula;

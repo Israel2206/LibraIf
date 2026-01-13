@@ -6,6 +6,7 @@
 package app;
 
 import model.Biblioteca;
+import model.PerfilUsuario;
 import model.Usuario;
 
 import java.util.Scanner;
@@ -35,14 +36,16 @@ public class Main {
                 System.out.print("Matrícula: ");
                 String matricula = scanner.nextLine();
 
-                System.out.print("Tipo de usuário (comum/bibliotecario): ");
-                String tipoDeUsuario = scanner.nextLine();
+                biblioteca.mostrarTipoDeUsuario();
+                System.out.println("Digite: ");
+                int tipoDeUsuario = scanner.nextInt();
+                PerfilUsuario perfil = PerfilUsuario.fromCodigo(tipoDeUsuario);
 
 
                 if (biblioteca.verificarMatricula(matricula)){
                     System.out.println("Está matrícula já está sendo usada!");
                 } else{
-                    Usuario usuario = new Usuario(nome, senha, matricula, tipoDeUsuario);
+                    Usuario usuario = new Usuario(nome, senha, matricula, perfil);
                     biblioteca.cadastrarUsuario(usuario);
                     System.out.println("Usuário cadastrado com sucesso!");
                 }
@@ -56,7 +59,8 @@ public class Main {
                     String senha = scanner.next();
 
                     if (biblioteca.verificarSenha(senha)){
-                        System.out.println("senha certa fih, so testando até aqui!");
+                        //fazer um verificador se a pessoa é comum ou bibliotecario(a)
+
                     }else {
                         System.out.println("Senha Incorreta!");
                     }
