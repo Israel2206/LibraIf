@@ -9,6 +9,7 @@ import model.Biblioteca;
 import model.PerfilUsuario;
 import model.Usuario;
 
+import java.util.Objects;
 import java.util.Scanner;
 
 import static model.PerfilUsuario.COMUM;
@@ -62,7 +63,7 @@ public class Main {
                 } else{
                     System.out.print("Informe a sua Senha: ");
                     String senha = scanner.next();
-                    if (senha == usuario.getSenha()){
+                    if (Objects.equals(senha, usuario.getSenha())){
                         if (usuario.getTipoDeUsuario() == COMUM){
                             biblioteca.mostrarPainelUsuario();
                         }else{
