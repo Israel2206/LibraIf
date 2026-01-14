@@ -69,6 +69,7 @@ public class Main {
                                 biblioteca.mostrarPainelFuncionario();
                                 System.out.print("Digite: ");
                                 int opcaoFuncionario = scanner.nextInt();
+                                scanner.nextLine();
 
                                 if (opcaoFuncionario == 1){
                                     System.out.println("===Cadastro de Livro===");
@@ -92,7 +93,8 @@ public class Main {
                                         biblioteca.cadastrarLivro(livro);
                                     }
 
-
+                                } else if (opcaoFuncionario == 2) {
+                                    biblioteca.listarLivros();
                                 } else if (opcaoFuncionario == 4) {
                                     System.out.println("Saindo da Conta!");
                                     break;

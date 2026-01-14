@@ -92,6 +92,14 @@ public class Biblioteca {
         return false;
     }
 
+    public void listarLivros(){
+        System.out.println("===Livros===");
+        for (Livro livro : livros){
+            System.out.println(livro);
+        }
+        System.out.println("\n===Livros===");
+    }
+
 
     /**
      * Painel principal
@@ -119,9 +127,10 @@ public class Biblioteca {
     public void mostrarPainelFuncionario(){
         System.out.println("===ESCOLHA===");
         System.out.println("1 - Cadastrar livro");
-        System.out.println("2 - Remover livro");
-        System.out.println("3 - Gerenciar usuários");
-        System.out.println("4 - Sair da conta");
+        System.out.println("2 - Listar os livros");
+        System.out.println("3 - Remover livro");
+        System.out.println("4 - Gerenciar usuários");
+        System.out.println("5 - Sair da conta");
     }
 
     /* Onde ficará localizado o painel do tipo de usuario*/
