@@ -65,37 +65,39 @@ public class Main {
                         if (usuario.getTipoDeUsuario() == COMUM){
                             biblioteca.mostrarPainelUsuario();
                         }else{
-                            biblioteca.mostrarPainelFuncionario();
-                            System.out.print("Digite: ");
-                            int opcaoFuncionario = scanner.nextInt();
+                            while (true){
+                                biblioteca.mostrarPainelFuncionario();
+                                System.out.print("Digite: ");
+                                int opcaoFuncionario = scanner.nextInt();
 
-                            if (opcaoFuncionario == 1){
-                                System.out.println("===Cadastro de Livro===");
-                                System.out.print("Digite o título do livro: ");
-                                String titulo = scanner.next();
+                                if (opcaoFuncionario == 1){
+                                    System.out.println("===Cadastro de Livro===");
+                                    System.out.print("Digite o título do livro: ");
+                                    String titulo = scanner.nextLine();
 
-                                System.out.print("Digite o nome do autor: ");
-                                String autor = scanner.next();
+                                    System.out.print("Digite o nome do autor: ");
+                                    String autor = scanner.nextLine();
 
-                                System.out.print("Digite o ISBN do livro: ");
-                                String isbn = scanner.next();
+                                    System.out.print("Digite o ISBN do livro: ");
+                                    String isbn = scanner.nextLine();
 
 
-                                System.out.print("Digite o ano de publicação do livro: ");
-                                int anoPublicacao = scanner.nextInt();
+                                    System.out.print("Digite o ano de publicação do livro: ");
+                                    int anoPublicacao = scanner.nextInt();
 
-                                if (biblioteca.verificarISBN(isbn)){
-                                    System.out.println("ISBN já em uso!");
-                                    return;
-                                }else {
-                                    Livro livro = new Livro(titulo,autor,isbn,anoPublicacao);
-                                    biblioteca.cadastrarLivro(livro);
+                                    if (biblioteca.verificarISBN(isbn)){
+                                        System.out.println("ISBN já em uso!");
+                                    }else {
+                                        Livro livro = new Livro(titulo,autor,isbn,anoPublicacao);
+                                        biblioteca.cadastrarLivro(livro);
+                                    }
+
+
+                                } else if (opcaoFuncionario == 4) {
+                                    System.out.println("Saindo da Conta!");
+                                    break;
                                 }
 
-
-                            } else if (opcaoFuncionario == 4) {
-                                System.out.println("Saindo da Conta!");
-                                break;
                             }
                         }
                     }else {
