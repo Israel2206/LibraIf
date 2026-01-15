@@ -114,15 +114,18 @@ public class Biblioteca {
 
     public void pegarLivro(String matricula,String isbn){
         Usuario usuario = buscarUsuarioPorMatricula(matricula);
+        boolean temIsbn = false;
         if (!usuario.isAtrasado()){
             for (Livro livro : livros){
                 if (livro.getIsbn().equals(isbn)){
                     livro.setDisponivel(false);
                     usuario.setAtrasado(true);
+                    temIsbn = true;
                     System.out.println("Empréstimo feito!");
-                }else {
-                    System.out.println("O ISBN não foi localizado!");
                 }
+            }
+            if (!temIsbn){
+                System.out.println("O ISBN não foi localizado!");
             }
         }else {
             System.out.println("Você já tem um Livro!");
