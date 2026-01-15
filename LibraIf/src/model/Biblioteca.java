@@ -28,7 +28,7 @@ public class Biblioteca {
         usuarios = new ArrayList<>();
     }
 
-    /* Métodos do Usuario */
+    /* Métodos do Admin */
 
     public void cadastrarUsuario(Usuario usuario){
         usuarios.add(usuario);
@@ -110,6 +110,40 @@ public class Biblioteca {
         }
     }
 
+    /* Métodos do usuario*/
+
+    public void pegarLivro(String matricula,String isbn){
+        Usuario usuario = buscarUsuarioPorMatricula(matricula);
+        if (!usuario.isAtrasado()){
+            for (Livro livro : livros){
+                if (livro.getIsbn().equals(isbn)){
+                    livro.setDisponivel(false);
+                    usuario.setAtrasado(true);
+                    System.out.println("Empréstimo feito!");
+                }else {
+                    System.out.println("O ISBN não foi localizado!");
+                }
+            }
+        }else {
+            System.out.println("Você já tem um Livro!");
+        }
+    }
+
+    public void devolverLivro(String matricula,String isbn){
+        Usuario usuario = buscarUsuarioPorMatricula(matricula);
+        if (usuario.isAtrasado()){
+            for (Livro livro : livros){
+                if (livro.getIsbn().equals(isbn)){
+                    livro.setDisponivel(true);
+                    usuario.setAtrasado(false);
+                    System.out.println("Livro devolvido com sucesso!");
+                }
+            }
+        }else {
+            System.out.println("Você não possui livros no momento!");
+        }
+    }
+
 
     /**
      * Painel principal
@@ -129,9 +163,10 @@ public class Biblioteca {
 
     public void mostrarPainelUsuario(){
         System.out.println("===ESCOLHA===");
-        System.out.println("1 - Ver livros disponíveis");
+        System.out.println("1 - Ver livros");
         System.out.println("2 - Fazer empréstimo");
-        System.out.println("3 - Sair da conta");
+        System.out.println("3 - Devolver livro");
+        System.out.println("4 - Sair da conta");
     }
 
     public void mostrarPainelFuncionario(){

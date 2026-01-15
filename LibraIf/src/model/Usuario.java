@@ -10,8 +10,13 @@ public class Usuario {
     private String matricula;
     private boolean atrasado;
     private PerfilUsuario tipoDeUsuario;
+    private boolean possuiLivro;
 
     /* Definindo os Getters */
+
+    public void setPossuiLivro(boolean possuiLivro) {
+        this.possuiLivro = possuiLivro;
+    }
 
     public PerfilUsuario getTipoDeUsuario() {
         return tipoDeUsuario;

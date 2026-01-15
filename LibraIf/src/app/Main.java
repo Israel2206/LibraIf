@@ -63,7 +63,32 @@ public class Main {
                     String senha = scanner.next();
                     if (Objects.equals(senha, usuario.getSenha())){
                         if (usuario.getTipoDeUsuario() == COMUM){
-                            biblioteca.mostrarPainelUsuario();
+                            while (true){
+                                biblioteca.mostrarPainelUsuario();
+                                int opcaoUsuario = scanner.nextInt();
+                                scanner.nextLine();
+
+                                if (opcaoUsuario == 1){
+                                    biblioteca.listarLivros();
+                                } else if (opcaoUsuario == 2) {
+                                    System.out.print("Digite o ISBN do livro: ");
+                                    String isbn = scanner.nextLine();
+
+                                    biblioteca.pegarLivro(matricula, isbn);
+
+                                } else if (opcaoUsuario == 3) {
+                                    System.out.print("Digite o ISBN do livro: ");
+                                    String isbn = scanner.nextLine();
+
+                                    biblioteca.devolverLivro(matricula, isbn);
+
+                                }else if (opcaoUsuario == 4){
+                                    System.out.println("Saindo da Conta...");
+                                    break;
+                                }
+
+
+                            }
                         }else{
                             while (true){
                                 biblioteca.mostrarPainelFuncionario();
