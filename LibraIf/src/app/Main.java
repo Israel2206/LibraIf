@@ -82,7 +82,6 @@ public class Main {
                                     System.out.print("Digite o ISBN do livro: ");
                                     String isbn = scanner.nextLine();
 
-
                                     System.out.print("Digite o ano de publicação do livro: ");
                                     int anoPublicacao = scanner.nextInt();
 
@@ -95,6 +94,11 @@ public class Main {
 
                                 } else if (opcaoFuncionario == 2) {
                                     biblioteca.listarLivros();
+                                } else if (opcaoFuncionario == 3) {
+                                    System.out.print("Digite o ISBN do livro para ser removido: ");
+                                    String isbn = scanner.nextLine();
+
+                                    biblioteca.removerLivro(isbn);
                                 } else if (opcaoFuncionario == 4) {
                                     System.out.println("Saindo da Conta!");
                                     break;
