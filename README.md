@@ -16,8 +16,11 @@ Além disso, o projeto foi pensado para ser **evolutivo**, permitindo a adição
 
 ## Estado Atual
 
-Atualmente, o projeto está em fase inicial e **ainda não possui funcionalidades implementadas**.  
-Ele servirá como base para o desenvolvimento progressivo do sistema.
+Atualmente, o projeto encontra-se em **fase inicial de desenvolvimento**, porém já possui funcionalidades básicas implementadas.  
+O sistema permite o **cadastro e gerenciamento de livros**, com operações como adição, listagem, busca e remoção, servindo como base para a evolução do projeto.
+
+Novas funcionalidades estão sendo planejadas, como **persistência de dados**, melhorias na organização do código e expansão das regras de negócio.
+
 
 ## Funcionalidades Futuras (planejadas)
 
